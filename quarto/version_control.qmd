@@ -1,0 +1,24 @@
+---
+title: "Github command line utilities"
+---
+
+# Github
+
+## Get repo
+```{python}
+def get_repo():   
+    !gh repo list > git-repo-list.txt
+    with open("./git-repo-list.txt") as f:
+        lines = f.readlines()
+    repos = [line.split()[0] for line in lines]
+    return repos
+
+repos = get_repo()
+repos.sort()
+repos[:5]
+repos.remove("VincentChong123/tfip_da")
+```
+
+```{python}
+print(f"number of repo {len(repos)}\nrepo name {[r.split("/")[-1] for r in repos[:5]]}")
+```
