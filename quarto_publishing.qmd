@@ -1,0 +1,12 @@
+---
+
+---
+
+# Format Quarto to support scrolling bar in Github.com
+
+```
+in _quarto.yaml, add setting below
+format:
+  html:
+    code-overflow: wrap
+```
